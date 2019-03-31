@@ -57,10 +57,10 @@ function style_and_script_reader() {
 	wp_enqueue_style( $handle, $src, $deps, $ver, $in_footer );
 
 	$arr = array(
-		'handle'		=> 'jquery.sidr.light.css',
-		'src'				=> $dir . '/style/jquery.sidr.light.css',
+		'handle'		=> 'jquery.sidr.min.css',
+		'src'				=> $dir . '/style/plugin/jquery.sidr.min.css',
 		'deps'			=> array(),
-		'ver'				=> '2.2.1',
+		'ver'				=> false,
 		'in_footer' => false,
 	);
 	extract($arr);
@@ -68,7 +68,7 @@ function style_and_script_reader() {
 
 	$arr = array(
 		'handle'		=> 'animate.min.css',
-		'src'				=> $dir . '/style/animate.min.css',
+		'src'				=> $dir . '/style/plugin/animate.min.css',
 		'deps'			=> array(),
 		'ver'				=> '3.7.0',
 		'in_footer' => false,
@@ -78,7 +78,7 @@ function style_and_script_reader() {
 
 	$arr = array(
 		'handle'		=> 'vegas.min.css',
-		'src'				=> $dir . '/style/vegas.min.css',
+		'src'				=> $dir . '/style/plugin/vegas.min.css',
 		'deps'			=> array(),
 		'ver'				=> false,
 		'in_footer' => false,
@@ -140,18 +140,6 @@ function style_and_script_reader() {
 		wp_enqueue_style( $handle, $src, $deps, $ver, $in_footer );
 	}
 
-	if( is_page('stepupstyle.css') ) {
-		$arr = array(
-			'handle'		=> 'step-up-stye.css',
-			'src'				=> $dir . '/style/step-up-style.css',
-			'deps'			=> array(),
-			'ver'				=> false,
-			'in_footer' => false,
-		);
-		extract($arr);
-		wp_enqueue_style( $handle, $src, $deps, $ver, $in_footer );
-	}
-
 	wp_deregister_script('jquery');
 
 	$arr = array(
@@ -195,8 +183,18 @@ function style_and_script_reader() {
 	wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
 
 	$arr = array(
+		'handle'		=> 'jquery.heightLine.js',
+		'src'				=> $dir . '/script/plugin/jquery.heightLine.js',
+		'deps'			=> array('jquery'),
+		'ver'				=> false,
+		'in_footer' => true,
+	);
+	extract($arr);
+	wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
+
+	$arr = array(
 		'handle'		=> 'jquery.inview.min.js',
-		'src'				=> $dir . '/script/jquery.inview.min.js',
+		'src'				=> $dir . '/script/plugin/jquery.inview.min.js',
 		'deps'			=> array('jquery'),
 		'ver'				=> false,
 		'in_footer' => true,
@@ -206,7 +204,7 @@ function style_and_script_reader() {
 
 	$arr = array(
 		'handle'		=> 'vegas.min.js',
-		'src'				=> $dir . '/script/vegas.min.js',
+		'src'				=> $dir . '/script/plugin/vegas.min.js',
 		'deps'			=> array('jquery'),
 		'ver'				=> false,
 		'in_footer' => true,
@@ -216,7 +214,7 @@ function style_and_script_reader() {
 
 	$arr = array(
 		'handle'		=> 'scrollreveal.min.js',
-		'src'				=> $dir . '/script/scrollreveal.min.js',
+		'src'				=> $dir . '/script/plugin/scrollreveal.min.js',
 		'deps'			=> array('jquery'),
 		'ver'				=> false,
 		'in_footer' => true,
