@@ -299,6 +299,12 @@ select::-ms-expand {
 }
 .flex-box {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.flex-between {
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .ffs {
