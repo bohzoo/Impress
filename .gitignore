@@ -1,0 +1,13 @@
+.DS_Store
+
+.htaccess
+.htpasswd
+wp-config.php
+wp-content/uploads/
+sitemap.xml
+sitemap.xml.gz
+*.log
+wp-content/cache/
+wp-content/backups/
+wp-content/themes/*
+!wp-content/themes/impress
