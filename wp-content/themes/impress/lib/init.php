@@ -19,8 +19,8 @@ function style_and_script_reader() {
 	wp_enqueue_style( $handle, $src, $deps, $ver, $in_footer );
 
 	$arr = array(
-		'handle'		=> 'OpenSans',
-		'src'				=> 'https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet',
+		'handle'		=> 'Cardo',
+		'src'				=> '<link href="https://fonts.googleapis.com/css?family=Cardo:400,700" rel="stylesheet">',
 		'deps'			=> array(),
 		'in_footer' => false,
 	);
@@ -57,18 +57,8 @@ function style_and_script_reader() {
 	wp_enqueue_style( $handle, $src, $deps, $ver, $in_footer );
 
 	$arr = array(
-		'handle'		=> 'jquery.sidr.min.css',
-		'src'				=> $dir . '/style/plugin/jquery.sidr.min.css',
-		'deps'			=> array(),
-		'ver'				=> false,
-		'in_footer' => false,
-	);
-	extract($arr);
-	wp_enqueue_style( $handle, $src, $deps, $ver, $in_footer );
-
-	$arr = array(
 		'handle'		=> 'animate.min.css',
-		'src'				=> $dir . '/style/plugin/animate.min.css',
+		'src'				=> $dir . '/assets/plugin/animate.min.css',
 		'deps'			=> array(),
 		'ver'				=> '3.7.0',
 		'in_footer' => false,
@@ -78,7 +68,7 @@ function style_and_script_reader() {
 
 	$arr = array(
 		'handle'		=> 'vegas.min.css',
-		'src'				=> $dir . '/style/plugin/vegas.min.css',
+		'src'				=> $dir . '/assets/plugin/vegas.min.css',
 		'deps'			=> array(),
 		'ver'				=> false,
 		'in_footer' => false,
@@ -88,9 +78,9 @@ function style_and_script_reader() {
 
 	$arr = array(
 		'handle'		=> 'normalize.css',
-		'src'				=> $dir . '/style/normalize.css',
+		'src'				=> $dir . '/assets/normalize.css',
 		'deps'			=> array(),
-		'ver'				=> '1.0',
+		'ver'				=> false,
 		'in_footer' => false,
 	);
 	extract($arr);
@@ -98,9 +88,9 @@ function style_and_script_reader() {
 
 	$arr = array(
 		'handle'		=> 'common.css',
-		'src'				=> $dir . '/style/common.css',
+		'src'				=> $dir . '/assets/common.css',
 		'deps'			=> array(),
-		'ver'				=> '1.0',
+		'ver'				=> false,
 		'in_footer' => false,
 	);
 	extract($arr);
@@ -108,9 +98,9 @@ function style_and_script_reader() {
 
 	$arr = array(
 		'handle'		=> 'all.css',
-		'src'				=> $dir . '/style/all.css',
+		'src'				=> $dir . '/assets/all.css',
 		'deps'			=> array(),
-		'ver'				=> '1.0',
+		'ver'				=> false,
 		'in_footer' => false,
 	);
 	extract($arr);
@@ -119,9 +109,9 @@ function style_and_script_reader() {
 	if( is_home() || is_front_page() ) {
 		$arr = array(
 			'handle'		=> 'home.css',
-			'src'				=> $dir . '/style/home.css',
+			'src'				=> $dir . '/assets/home.css',
 			'deps'			=> array(),
-			'ver'				=> '1.0',
+			'ver'				=> false,
 			'in_footer' => false,
 		);
 		extract($arr);
@@ -131,9 +121,9 @@ function style_and_script_reader() {
 	if( is_page() ) {
 		$arr = array(
 			'handle'		=> 'page.css',
-			'src'				=> $dir . '/style/page.css',
+			'src'				=> $dir . '/assets/page.css',
 			'deps'			=> array(),
-			'ver'				=> '1.0',
+			'ver'				=> false,
 			'in_footer' => false,
 		);
 		extract($arr);
@@ -168,16 +158,6 @@ function style_and_script_reader() {
 		'deps'			=> array('jquery'),
 		'ver'				=> '3.2.0',
 		'in_footer' => false,
-	);
-	extract($arr);
-	wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
-
-	$arr = array(
-		'handle'		=> 'jquery.sidr.min.js',
-		'src'				=> $dir . '/script/jquery.sidr.min.js',
-		'deps'			=> array('jquery'),
-		'ver'				=> '2.2.1',
-		'in_footer' => true,
 	);
 	extract($arr);
 	wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );

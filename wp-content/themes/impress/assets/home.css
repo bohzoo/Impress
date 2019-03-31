@@ -1,21 +1,20 @@
 /*
-======== animation ========
-*/
+ ======== animation ========
+ */
 .vegas-animation-kenburns {
   animation: kenburns ease-out;
 }
 @keyframes kenburns {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
   100% {
-      transform: scale(1.16);
+    transform: scale(1.16);
   }
 }
-
 /*
-======== mainvisual ========
-*/
+ ======== mainvisual ========
+ */
 #top-mainvisual {
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,4 +35,18 @@
   text-align: center;
   width: 100%;
   margin: 0;
+}
+/*
+ ======== about ========
+ */
+#top-about-box li {
+  border: 1px solid #ccc;
+  font-size: 1.4rem;
+  width: 22%;
+}
+#top-about-box li p {
+  margin-bottom: 10px;
+}
+#top-about-box li .txt-box a {
+  text-align: right;
 }

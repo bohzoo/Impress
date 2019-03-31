@@ -6,8 +6,11 @@
 	max-height: 999999px;
 }
 
-/* = Fonts and  Color
+/* = Fonts and Color
 -------------------------------------------------------------- */
+.cardo {
+	font-family: 'Cardo', serif;
+}
 .ffs {
 	font-feature-settings: "palt"
 }
@@ -76,30 +79,42 @@ a {
 	opacity: 1;
 	transition-property: opacity;
 	transition-duration: .3s;
+	&:focus {
+		outline: none;
+	}
+	&:link,
+	&:visited {
+		color: inherit;
+		text-decoration: none;
+	}
+	&:active,
+	&:hover {
+		text-decoration: none;
+		opacity: .8;
+	}
+	&.underline {
+		text-decoration: underline;
+	}
+	&.img-box {
+		max-width: 100%;
+		display: inline-block;
+		vertical-align: top;
+		transition: 0.35s opacity;
+	}
+	&.tel {
+		opacity: 1;
+	}
+	&.btn {
+		display: block;
+		box-sizing: border-box;
+		border: 1px solid #000;
+		background-color: #000;
+		color: #fff;
+		font-weight: normal;
+		text-align: center;
+		margin: 0 auto;
+	}
 }
-a:focus {
-	outline: none;
-}
-a:link,
-a:visited {
-	color: inherit;
-	text-decoration: none;
-}
-a:active,
-a:hover {
-	text-decoration: none;
-	opacity: .8;
-}
-a.underline {
-	text-decoration: underline;
-}
-a.img-box {
-	max-width: 100%;
-	display: inline-block;
-	vertical-align: top;
-	transition: 0.35s opacity;
-}
-a.tel,
 .tel a {
 	opacity: 1;
 }
@@ -111,16 +126,6 @@ a.tel,
 }
 .btn-box {
   margin-top: 60px;
-}
-a.btn {
-	display: block;
-	box-sizing: border-box;
-	border: 1px solid #000;
-	background-color: #000;
-	color: #fff;
-	font-weight: normal;
-	text-align: center;
-	margin: 0 auto;
 }
 
 /* = Table

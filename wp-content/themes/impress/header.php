@@ -41,8 +41,8 @@ $(function(){
 		<div id="head-inner" class="content-width">
 			<div class="clearfix">
 				<div class="left">
-					<div id="h-logo" class="img-box">
-						<a href="<?php echo esc_attr(home_url()); ?>">
+					<div id="h-logo">
+						<a href="<?php echo esc_attr(home_url()); ?>" class="img-box">
 							<img src="https://placehold.jp/280x40.png" alt="<?php bloginfo('name'); ?>">
 						</a>
 					</div>

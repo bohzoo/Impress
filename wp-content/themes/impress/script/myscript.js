@@ -10,6 +10,13 @@ $(function(){
 		$('head').prepend('<meta name="viewport" content="' + pcView + '">');
 	}
 });
+/* = enable heightLine
+-------------------------------------------------------------- */
+$(function(){
+	$(window).on('load', function(){
+		$('.heightLine').heightLine();
+	});
+});
 
 /* = heightLineを有効にする
 -------------------------------------------------------------- */
@@ -82,23 +89,6 @@ $(function(){
 // 		}
 // 	});
 // });
-
-/* = sidrのセットアップ
--------------------------------------------------------------- */
-$(function() {
-$('#burger-menu').sidr({
-	side: 'right',
-});
-var $burgerBtn = $('#burger-menu');
-var n = $('.sidr-open').length;
-$burgerBtn.click(function() {
-	if(n) {
-		$burgerBtn.text('CLOSE');
-	} else {
-		$burgerBtn.text('MENU');
-	}
-});
-});
 
 /* = imagesloadedのセットアップ
 -------------------------------------------------------------- */
