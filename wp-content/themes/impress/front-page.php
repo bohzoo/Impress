@@ -13,14 +13,17 @@
         <div class="sec-sub-ttl main-txt-color">私たちについて</div>
       </div>
       <div id="top-about-box">
+        <div class="txt-box ffs">
+          <p>下にあるカードのリストはflex-betweenクラスを使用しています。</p>
+          <p>flex-betweenはjustify-contentにspace-betweenを使用しています。なので、このクラスを使用する場合はリストの数が決まっているときに使用します。</p>
+        </div>
         <ul class="flex-between">
           <?php for($i=0; $i<4; $i++) : ?>
           <li>
             <a href="#" class="img-box"><img src="https://placehold.jp/300x200.png" alt="リンク"></a>
-            <div class="txt-box">
-              <p class="ffs">
-                スライダーの実装を紹介します。スライダーはメインビジュアルやニューススライダー、写真の一覧を表示したりします。
-              </p>
+            <div class="txt-inner-box ffs">
+              <p>ここではVue.jsの使用デモを使っています。</p>
+              <p></p>
               <a href="#" style="display: block;">詳細を見る</a>
             </div>
           </li>

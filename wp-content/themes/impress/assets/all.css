@@ -35,6 +35,12 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, .15), 0 3px 3px rgba(0, 0, 0, .15);
 }
 .txt-box {
+  margin-bottom: 20px;
+}
+.txt-box p {
+  margin: 7px 0;
+}
+.txt-inner-box {
   box-sizing: border-box;
   padding: 10px 14px;
 }
